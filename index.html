@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        h1 {
+            color: red;
+        }
+
+        #food-title {
+            color: aqua;
+        }
+
+        .food .foreign {
+            font-weight: 700;
+
+        }
+
+        #food-title {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1> This is my Header no Banner </h1>
+    </header>
+
+    <main id="main-container">
+
+        <section id="something">
+            <h1 class="bg-red"> Welcome to my DOM</h1>
+            <ul>
+                <li class="bold">Shironamhin</li>
+                <li>Aesthetics</li>
+                <li>The glitch</li>
+                <li class="something">Document Object Model</li>
+                <li class="something">DOM</li>
+                <li id="band">Kureghor</li>
+            </ul>
+        </section>
+
+        <section class="food">
+            <h1 id="food-title">Foods I love</h1>
+            <ul>
+                <li>Fried rice</li>
+                <li>Potato</li>
+                <li>Lentils</li>
+                <li>Fish</li>
+                <li class="foreign">Pizza</li>
+                <li class="foreign">Pasta</li>
+                <li class="foreign">Burger</li>
+            </ul>
+        </section>
+
+
+        <section id="name" class="one-child">
+            <h1 id="for-styles">DOM - Styles by JavaScript</h1>
+        </section>
+
+
+        <section id="players-container">
+            <h2 id="players-list">Players List:</h2>
+            <ul id="players-ul">
+                <li>Shakib</li>
+                <li>Tamim</li>
+                <li>Maxwell</li>
+                <li>Stokes</li>
+            </ul>
+        </section>
+
+
+    </main>
+
+
+    <script>
+        // console.log("Hello JavaScript")
+        // console.log("I'm Learning web Development")
+        // console.log("Document Object Model")
+        const student = {
+            name: 'bayjid',
+            id: 121,
+            study: function (subject) {
+                console.log("Studying Subject:", subject)
+            }
+        }
+        // document.getElementsByTagName()
+        const liCollection = document.getElementsByTagName("li");
+        console.log(liCollection)
+        for (const li of liCollection) {
+            console.log(li.innerText)
+        }
+
+        // all h1 
+        const allHeadings = document.getElementsByTagName("h1");
+        for (const heading of allHeadings) {
+            // console.log(heading)
+            // console.log(heading.innerText)
+        }
+
+        // id find
+        const foodTitle = document.getElementById("food-title");
+        console.log(foodTitle)
+        foodTitle.innerText = "Some foods I like"
+
+        const bandElement = document.getElementById("band");
+        bandElement.innerText = "Kureghor 2.O"
+
+        const findName = document.getElementById("name");
+        console.log(findName.innerText)
+
+
+        // get element by class Name
+        const foreignElements = document.getElementsByClassName("foreign");
+        for (const element of foreignElements) {
+            console.log(element)
+            console.log(element.innerText)
+        }
+
+        // query selector all
+        const someElements = document.querySelectorAll(" #something .something");
+        for (const someElement of someElements) {
+            console.log(someElement.innerText)
+        }
+    </script>
+
+
+    <script src="js/hello.js "></script>
+    <script src="js/css-in-js.js"></script>
+    <script src="js/child.js"></script>
+    <script src="js/append.js"></script>
+</body>
+
+</html>

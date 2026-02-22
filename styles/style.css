@@ -1,0 +1,11 @@
+li{
+    color: blue;
+}
+
+.section-card{
+    background-color: aquamarine;
+    margin-bottom: 5px;
+    border-radius: 13px;
+    border: 2px solid black;
+    padding: 10px;
+}
