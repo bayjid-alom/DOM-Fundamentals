@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise</title>
+</head>
+
+<style>
+    h1 {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <section>
+        <div>
+            <h1>Students List Below:</h1>
+            <ul id="student-list">
+                <li>Rahim Ahmed</li>
+                <li>Karim Hasan</li>
+                <li id="single-student">Jannat Akter</li>
+                <li>Sumaiya Islam</li>
+                <li>Nusrat Jahan</li>
+                <li>Hasan Mahmud</li>
+                <li class="friend-student">Fahim Hossain</li>
+                <li class="friend-student">Mim Akter</li>
+                <li class="friend-student">Sakib Khan</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <script>
+
+        // getElementsByTagName
+        const liCollection = document.getElementsByTagName("li");
+        console.log(liCollection)
+        for (const li of liCollection) {
+            console.log(li.innerText)
+        }
+
+        // getElementById
+        const studentElement = document.getElementById("student-list");
+        console.log(studentElement)
+
+        const singleStudent = document.getElementById("single-student");
+        console.log(singleStudent.innerText)
+
+        // getElementsByClassName
+        const friendElements = document.getElementsByClassName("friend-student");
+        console.log(friendElements) // Array আকারে দেখাবে...Loop now
+
+        for (const element of friendElements) {
+            console.log(element.innerText)
+        }
+
+    </script>
+</body>
+
+</html>
