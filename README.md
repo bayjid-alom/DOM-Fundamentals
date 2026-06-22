@@ -1,6 +1,8 @@
 # DOM - Document Object Model 🔥
 <br>
-DOM (Document Object Model) হলো একটি ওয়েব পেজের গাছের (Tree) মতো কাঠামোগত উপস্থাপন, যা JavaScript-এর মাধ্যমে HTML ডকুমেন্টকে পড়তে, পরিবর্তন করতে এবং নিয়ন্ত্রণ করতে সাহায্য করে।
+
+- DOM (Document Object Model) হলো একটি ওয়েব পেজের গাছের (Tree) মতো কাঠামোগত উপস্থাপন, যা JavaScript-এর মাধ্যমে HTML ডকুমেন্টকে পড়তে, পরিবর্তন করতে এবং নিয়ন্ত্রণ করতে সাহায্য করে।
+- DOM (Document Object Model) হলো ব্রাউজার যখন HTML ফাইল লোড করে, তখন সেই HTML পেজকে Object (Tree structure) এ রূপান্তর করার একটা system।
 
 <br>
 
@@ -61,6 +63,47 @@ foodElement.style.color = "gold";
  
 - foodElement.setAttribute('title' , 'Title of tooltip by JS')
 - undefined
+
+
+<br><br>
+
+
+### What is Node?
+- DOM-এর প্রতিটি অংশ (Element, Text, Comment ইত্যাদি) কে Node বলা হয়। Such as:
+- DOM = HTML পেজের JavaScript Object Structure
+- Node = DOM-এর একটি একক সদস্য (Unit)
+- 
+
+### NodeList vs HTMLCollection - কে কোনভাবে আউটপুট দেয়?
+- getElementsByTagName  → HTMLCollection   (by...)
+- querySelectorAll      → NodeList      (query...)
+
+
+### 🧠 1️⃣ NodeList কেমন দেখতে?
+- const nodes = document.querySelectorAll("section");
+- console.log(nodes);
+- 🔥 Output এর মতো দেখাবে:
+- NodeList(3) [section, section, section]
+
+ <br>
+
+### 🧠 2️⃣ HTMLCollection কেমন দেখতে?
+- const html = document.getElementsByTagName("section");
+- console.log(html);
+- 🔥 Output এর মতো দেখাবে:
+- HTMLCollection(3) [section, section, section]
+
+
+🧠 মনে রাখার ট্রিক :
+- getElementById()      → Element
+- querySelector()       → Element
+
+<br>
+
+## Style Add
+
+
+
 
 
 

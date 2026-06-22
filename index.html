@@ -9,26 +9,20 @@
     <title>Tour of DOM</title>
 
     <style>
-        h1 {
-            color: red;
-        }
-
         #food-title {
             color: red;
-            /* background-color: lightgreen; */
         }
 
         .food .foreign {
             font-weight: 700;
         }
 
-        body {
-            background-color: bisque;
-        }
 
         .bg-red {
-            background-color: rgb(255, 31, 31);
-            color: white;
+            background-color: rgba(255, 31, 31, 0.24);
+            color: black;
+            font-weight: 600;
+
 
         }
 
@@ -45,8 +39,8 @@
 
 <body>
 
-    <header>
-        <h1>This is Header. Not Banner</h1>
+    <header id="header">
+        <h1>THIS IS HEADER. NO BANNER</h1>
 
     </header>
 
@@ -89,11 +83,24 @@
         </section>
 
 
-        <div class="p-tags">
-            <p>Md. Babul Mia</p>
-            <p>Md. Bayjid Alom</p>
-            <p>Md. Jubaeid Alom</p>
-        </div>
+        <section id="players-container">
+            <ul>
+                <li>Tamim Iqbal</li>
+                <li>Shakib Al Hasan</li>
+                <li>Mushfiqur Rahim</li>
+                <li>Mahmudullah Riyad</li>
+                <li>Mustafizur Rahman</li>
+            </ul>
+        </section>
+
+
+        <section id="family-members">
+            <div class="p-tags">
+                <p>Md. Babul Mia</p>
+                <p>Md. Bayjid Alom</p>
+                <p>Md. Jubaeid Alom</p>
+            </div>
+        </section>
 
     </main>
 
@@ -174,6 +181,9 @@
 
     <!--✔️ External -->
     <script src="./script/01_hello.js"></script>
+    <script src="./script/02_cssInJS.js"></script>
+    <script src="./script/03_own.js"></script>
+
 </body>
 
 </html>

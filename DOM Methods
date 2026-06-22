@@ -1,0 +1,23 @@
+DOM Methods :
+
+1. getElementById()
+2. getElementsByClassName()
+3. getElementsByTagName()
+4. querySelector()
+5. querySelectorAll()
+
+6. createElement()
+7. appendChild()
+8. removeChild()
+9. remove()
+
+10. getAttribute()
+11. setAttribute()
+
+12. innerText
+13. innerHTML
+
+14. style.property
+
+15. addEventListener()
+16. removeEventListener()
