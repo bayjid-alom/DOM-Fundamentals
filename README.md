@@ -43,6 +43,7 @@ foodElement.style.color = "gold";
 - DOMTokenList [value: '']
 
 
+
 ### একটা ক্লাসের ভেল্যু অন্য একটি এলিমেন্ট এর প্রপার্টি হিসেবে ব্যবহার।
 - প্রথমে ঘোষণাঃ const foodElement = document.getElementById("food-title")
 - undefined
@@ -74,7 +75,7 @@ foodElement.style.color = "gold";
 - Node = DOM-এর একটি একক সদস্য (Unit)
 - 
 
-### NodeList vs HTMLCollection - কে কোনভাবে আউটপুট দেয়?
+## NodeList vs HTMLCollection - কে কোনভাবে আউটপুট দেয়?
 - getElementsByTagName  → HTMLCollection   (by...)
 - querySelectorAll      → NodeList      (query...)
 
@@ -98,10 +99,47 @@ foodElement.style.color = "gold";
 - getElementById()      → Element
 - querySelector()       → Element
 
+
+
+### HTMLCollection vs NodeList (Differences)
+
+1. Source
+- HTMLCollection → only HTML elements
+- NodeList → nodes (elements + text + comments)
+ 
+2. Methods
+- HTMLCollection → no forEach
+- NodeList → has forEach (in most cases)
+ 
+3. Live / Static
+- HTMLCollection → Live (auto update)
+- NodeList → Mostly Static (does not auto update)
+
+4. Example
+- HTMLCollection → getElementsByClassName()
+NodeList → querySelectorAll()
 <br>
 
-## Style Add
+## Style 
 
+## ✔️ Node : Most Used
+- parentNode
+- childNodes
+
+## ✔️ createElement : 
+const newChild = document.createElement("li")
+undefined
+newChild
+<li> ​</li>​
+newChild.innerText = "This is new Child"
+'This is new Child'
+
+check: 04_child.js
+
+✔️ 3 important tasks : to crate a new element
+01. created clement and set innerText or innerHTML
+02. find the parent where you will add the child
+03. append the child to the parent
 
 
 
@@ -114,3 +152,7 @@ foodElement.style.color = "gold";
 04. Traversing DOM - getElementByQuerySelector | querySelectorAll
 - NodeList vs HTMLCollection ? 
 05. Dynamic style, getAttribute, setAttribute, innerText, innerHTML
+06. Styling DOM properties, add and remove  CSS class using js
+07. NodeList, HTMLCollection, parentNode, childNodes, createElement
+08. create HTML elements using JavaScript and appendChild
+09. Summary (DOM Review)
