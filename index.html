@@ -14,13 +14,33 @@
         }
 
         #food-title {
-            color: green;
+            color: red;
+            /* background-color: lightgreen; */
+        }
+
+        .food .foreign {
+            font-weight: 700;
         }
 
         body {
             background-color: bisque;
         }
+
+        .bg-red {
+            background-color: rgb(255, 31, 31);
+            color: white;
+
+        }
+
+        .big {
+            font-size: 3em;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
     </style>
+
 </head>
 
 <body>
@@ -33,16 +53,29 @@
 
     <main>
 
-        <h1>Welcome to DOM Fundamentals</h1>
-        <ul>
-            <li class="foreign">Smarto</li>
-            <li>Bonobash</li>
-            <li>Nishshongo Ekaki</li>
-            <li id="band">Shironamhin</li>
-            <li class="international">International</li>
-        </ul>
+        <section id="old-dhaka" class="songs">
+            <h1>Welcome to DOM Fundamentals</h1>
 
-        <section>
+            <p>
+                <span>DOM</span>
+                <span>Manipulations</span>
+                <span>Methods</span>!!!
+            </p>
+
+            <h1>Hello <span>SPAN TAG</span></h1>
+            <ul>
+                <li class="foreign">Smarto</li>
+                <li>Bonobash</li>
+                <li>Nishshongo Ekaki</li>
+                <li id="band" class="bg-red">Shironamhin</li>
+                <li class="international">International</li>
+                <li class="foreign">BlackPink</li>
+            </ul>
+        </section>
+
+
+
+        <section class="food" style="border: 1px solid black; padding: 20px;">
             <h1 id="food-title">Foods I love</h1>
             <ul>
                 <li>Rice</li>
@@ -115,6 +148,26 @@
         for (const element of foreignElements) {
             console.log(element)
         }
+
+
+        // querySelector(".food .foreign")  -> first match
+        const foodForeign = document.querySelector(".food .foreign");
+        console.log(foodForeign)
+
+
+        // querySelectorAll  -> all match
+        const spanElements = document.querySelectorAll("#old-dhaka p span")
+        console.log(spanElements)  // nodeList [span, span, span]
+        console.log(spanElements[0])
+
+        for (const span of spanElements) {
+            console.log(span.innerText)
+        }
+
+        const imgElements = document.querySelectorAll("#old-dhaka img")
+        console.log(imgElements)  // null নেই
+
+
 
     </script>
 

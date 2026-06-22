@@ -29,9 +29,45 @@ This project explains the 3 ways to connect JavaScript with HTML.
 <br>
 
 
+## ✔️ Summary : DOM Manipulation
+foodElement.style.color = "gold";
+
+
+### in browser | পেইজ লোড হলেই ভেরিয়েবল হারিয়ে যায় (যদি ব্রাউজারে কোনো ভেরিয়েবল ঘোষণা করা হয়)
+
+- onst foodElement = document.getElementById("food-title")
+- undefined
+- foodElement.classList
+- DOMTokenList [value: '']
+
+
+### একটা ক্লাসের ভেল্যু অন্য একটি এলিমেন্ট এর প্রপার্টি হিসেবে ব্যবহার।
+- প্রথমে ঘোষণাঃ const foodElement = document.getElementById("food-title")
+- undefined
+- foodElement.classList    (ক্লাস ভিতরে কয়টা আছে - Checking)
+- DOMTokenList [value: '']
+- foodElement.classList.add('bg-red')
+- foodElement.classList.remove('bg-red')
+- undefined
+- foodElement.classList.add('bg-red')
+
+- foodElement.classList;       (ক্লাস ভিতরে কয়টা আছে - Checking)
+- DOMTokenList(2) ['bg-red', 'big', value: 'bg-red big']
+
+- foodElement.getAttribute("id")  আইডি আছে কিনা?
+- 'food-title'
+- foodElement.getAttribute("class")  ক্লাস আছে কিনা?
+- null
+ 
+- foodElement.setAttribute('title' , 'Title of tooltip by JS')
+- undefined
+
+
+
 ### Exploring the Document Object Model (DOM)
 01. DOM Intro
 02. Traversing(খুজে বের করা) DOM - getElementbyTagName
 03. Traversing DOM - getElementByClassName VS getElementById
 04. Traversing DOM - getElementByQuerySelector | querySelectorAll
+- NodeList vs HTMLCollection ? 
 05. Dynamic style, getAttribute, setAttribute, innerText, innerHTML
