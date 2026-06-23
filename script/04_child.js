@@ -17,3 +17,13 @@ const playersList = document.getElementById("player-list");
 
 // 03. append the child to the parent
 playersList.appendChild(newChild)
+
+
+
+
+// Styles way -01
+newChild.classList.add("child-styles");
+// Styles way -02
+newChild.style.padding = "6px";
+newChild.style.borderLeft = "2px solid black"
+

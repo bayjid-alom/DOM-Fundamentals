@@ -19,3 +19,11 @@ body {
     transform: translateY(-4px);
     box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0, 2);
 }
+
+
+.child-styles {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: black;
+    background-color: rgba(127, 255, 212, 0.479);
+}

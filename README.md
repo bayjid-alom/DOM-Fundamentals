@@ -24,7 +24,7 @@ This project explains the 3 ways to connect JavaScript with HTML.
 ---
 
 ### 03. External JavaScript
-- Alada `.js` file দিয়ে HTML এর সাথে connect করা হয়  
+- আলাদা `.js` file দিয়ে HTML এর সাথে connect করা হয়  
 - Best practice এবং professional way
 
 ---
@@ -37,8 +37,9 @@ foodElement.style.color = "gold";
 
 ### in browser | পেইজ লোড হলেই ভেরিয়েবল হারিয়ে যায় (যদি ব্রাউজারে কোনো ভেরিয়েবল ঘোষণা করা হয়)
 
-- onst foodElement = document.getElementById("food-title")
+- const foodElement = document.getElementById("food-title")
 - undefined
+---
 - foodElement.classList
 - DOMTokenList [value: '']
 
@@ -47,27 +48,32 @@ foodElement.style.color = "gold";
 ### একটা ক্লাসের ভেল্যু অন্য একটি এলিমেন্ট এর প্রপার্টি হিসেবে ব্যবহার।
 - প্রথমে ঘোষণাঃ const foodElement = document.getElementById("food-title")
 - undefined
+---
 - foodElement.classList    (ক্লাস ভিতরে কয়টা আছে - Checking)
 - DOMTokenList [value: '']
+---
 - foodElement.classList.add('bg-red')
 - foodElement.classList.remove('bg-red')
 - undefined
 - foodElement.classList.add('bg-red')
+---
 
 - foodElement.classList;       (ক্লাস ভিতরে কয়টা আছে - Checking)
 - DOMTokenList(2) ['bg-red', 'big', value: 'bg-red big']
-
+---
 - foodElement.getAttribute("id")  আইডি আছে কিনা?
 - 'food-title'
+---
 - foodElement.getAttribute("class")  ক্লাস আছে কিনা?
 - null
+---
  
 - foodElement.setAttribute('title' , 'Title of tooltip by JS')
 - undefined
 
 
 <br><br>
-
+---
 
 ### What is Node?
 - DOM-এর প্রতিটি অংশ (Element, Text, Comment ইত্যাদি) কে Node বলা হয়। Such as:
@@ -99,27 +105,27 @@ foodElement.style.color = "gold";
 - getElementById()      → Element
 - querySelector()       → Element
 
-
+---
 
 ### HTMLCollection vs NodeList (Differences)
 
 1. Source
 - HTMLCollection → only HTML elements
 - NodeList → nodes (elements + text + comments)
- 
+ ---
 2. Methods
 - HTMLCollection → no forEach
 - NodeList → has forEach (in most cases)
- 
+ ---
 3. Live / Static
 - HTMLCollection → Live (auto update)
 - NodeList → Mostly Static (does not auto update)
-
+---
 4. Example
 - HTMLCollection → getElementsByClassName()
-NodeList → querySelectorAll()
+- NodeList → querySelectorAll()
 <br>
-
+---
 ## Style 
 
 ## ✔️ Node : Most Used
@@ -136,17 +142,45 @@ newChild.innerText = "This is new Child"
 
 check: 04_child.js
 
-✔️ 3 important tasks : to crate a new element
-01. created clement and set innerText or innerHTML
-02. find the parent where you will add the child
-03. append the child to the parent
+### ✔️ 3 important tasks : নতুন element তৈরী করার জন্যঃ
+- 01. created clement and set innerText or innerHTML
+- 02. find the parent where you will add the child
+- 03. append the child to the parent
 
+
+### ✔️ Value change from browser :
+- const heading = document.querySelector("#players-container h1")
+- undefined
+ ---
+- heading
+- <>Bangladeshi Cricketers​</>​ (h1 tag)
+---
+- heading.innerText
+- 'Bangladeshi Cricketers :'
+---
+- heading.innerText = "Cricketers of Bangladesh"
+- 'Cricketers of Bangladesh'
+ 
+---
+
+### ✔️ setAttributes Vs getAttributes
+---
+- setAttribute()
+- HTML element-এর attribute add/change করার জন্য ব্যবহার হয়।
+- element.setAttribute("attribute-name", "value");
+---
+- <img id="photo">
+- const photo = document.getElementById("photo");
+- photo.setAttribute("src", "image.jpg");
+- photo.setAttribute("alt", "Nature Image");
+- <img id="photo" src="image.jpg" alt="Nature Image">
+---
 
 
 
 
 ### Exploring the Document Object Model (DOM)
-01. DOM Intro
+01. DOM Intro 
 02. Traversing(খুজে বের করা) DOM - getElementbyTagName
 03. Traversing DOM - getElementByClassName VS getElementById
 04. Traversing DOM - getElementByQuerySelector | querySelectorAll

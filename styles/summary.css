@@ -1,0 +1,18 @@
+body {
+    margin: 30px;
+}
+
+.section-design {
+    background-color: rgba(173, 216, 230, 0.233);
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.15em;
+}
+
+.section-design:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0, 2);
+}
